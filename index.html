@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="titlelogo.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <title> OTT</title>
+    <style>
+        body{
+            background-color: rgb(54, 7, 100);
+            width: 100%;
+            
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        nav {
+            height: 70px;
+            width: 100%;
+            background-image: radial-gradient(circle, rgb(5, 2, 2), rgb(6, 2, 42), rgb(57, 48, 48), rgb(54, 51, 51), rgb(6, 59, 116), rgb(21, 13, 13));
+            display: flex;
+            backdrop-filter: blur(8px);
+            align-items: center;
+            position: fixed;
+            top: 0px;
+            z-index: 1000;
+            
+        }
+        .nav-logo img{
+            height: 60px;
+            width: 130px;
+            margin: 10px 6px 10px 6px;
+        }
+        nav .nav-items{
+            margin-top: 10px;
+            position: absolute;
+            right: 20px;
+        }
+        .nav-items a{
+            text-decoration: none;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 15px 5px;
+            color: gray;
+            display: inline;
+            font-weight: 400;
+        }
+        .nav-items:hover a{
+            filter: blur(2px);
+        }
+        .nav-items a:hover{
+            color: snow;
+            filter: blur(0px);
+        }
+        .carousel-inner img{
+            height: 600px;
+            width: 90%;
+        }
+        .carousel-inner{
+            margin: 10px 0px 0px 80px;
+        }
+        .ccarousel-control-prev-icon{
+            position: relative;
+            left: 100px;
+        }
+        .carousel-control-next-icon{
+            position: relative;
+            right: 10px;
+        }
+        h2{
+            display: inline;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            color: deepskyblue;
+        }
+        h2:hover{
+            color: royalblue;
+        }
+        .frequent-image {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .frequent-image img{
+            margin: 5PX;
+            height: 300px;
+            width: 230px;
+            border: 3px rgb(15, 64, 155) solid;
+        }
+        .frequent-image img:hover{
+            transform: scale(1.2);
+            transition: all, 3s ease-in-out;
+            border-radius: 10px;
+        }
+        #carouselExampleAutoplaying{
+            margin-top: 100px;
+        }
+
+
+
+        .recent-image{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .recent-image img{
+            margin: 5PX;
+            height: 300px;
+            width: 230px;
+            border: 3px rgb(15, 64, 155) solid;
+
+        }
+        .recent-image img:hover{
+            transform: scale(1.2);
+            transition: all, 3s ease-in-out;
+            border-radius: 10px;
+        }
+
+
+        .toprated-image {
+            /* height: 200px;
+            width: 230px; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .toprated-image img{
+            margin: 5PX;
+            height: 300px;
+            width: 230px;
+            border:3px  rgb(15, 64, 155) solid;
+
+        }
+        .toprated-image img:hover{
+            transform: scale(1.2);
+            transition: all, 3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .favorites-image{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .favorites-image img{
+            margin: 5PX;
+            height: 300px;
+            width: 230px;
+            border: 3px rgb(15, 64, 155) solid;
+
+        }
+        .favorites-image img:hover{
+            transform: scale(1.2);
+            transition: all, 3s ease-in-out;
+            border-radius: 10px;
+        }
+        
+
+        /* nav .about {
+            margin-top: 10px;
+            position: absolute;
+            right: 20px;
+        } */
+        /* .about-items a{
+            text-decoration: none;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 50px 10px;
+            color: rgb(181, 175, 175);
+            display: inline;
+            font-weight: 400;
+        }
+        .about-items:hover a{
+            filter: blur(2px);
+        }
+        .about-items a:hover{
+            color: snow;
+            filter: blur(0px);
+        } */
+        
+
+        .abo{
+            font-size: 20px;
+            color: white;
+        }
+        .leg{
+            height: 100px;
+            width: 100px;
+            margin-left: 650px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .leg .ap1:hover{
+            /* transform: scale(1.2); */
+            transform: rotate(360deg);
+            transition: all, 3s ease;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body style="position: static;">
+    <nav>
+        <div class="nav-logo">
+            <img src="OTT.jpg" alt="">
+        </div><br>
+        <div class="nav-items">
+            <a href="#home">Home</a>
+            <a href="#freq">Frequently Watched</a>
+            <a href="#rec">Recent</a>
+            <a href="#top">Top Rated</a>
+            <a href="#fav">Favourites</a>
+            <a href="#about">About</a>
+            <a href="2.html">SignUp/SignIn</a>
+        </div>
+    </nav>
+        <!-- Home page start -->
+        <div class="home" id="home">
+            <h1></h1><br>
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="hridayam 1.webp" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="ohh.webp" class="d-block" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="raj.webp" class="d-block" alt="...">
+                  </div>
+                 
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div><br><br><br><br>
+        </div>
+        <!-- Home page end --> 
+        <!-- frequent section start -->
+          <div class="frequent" id="freq">
+            <h1></h1><br><br><br>
+            <h1 style="color: white;">Frequently Watched</h1>
+            <div class="frequent-image">
+                <img src="fav2 (1).webp" alt=""  class="1m2">
+                <img src="fav4 (1).jpg" alt=""   class="1m2">
+                <img src="fav5.jpg" alt=""       class="1m2">
+                <img src="fav6 (1).webp" alt=""  class="1m2">
+                <img src="fav7.webp" alt=""      class="1m2">
+                <img src="fav8.webp" alt=""      class="1m2">
+                <img src="fav9 (1).webp" alt=""  class="1m2">
+                <img src="fav10 (1).webp" alt="" class="1m2">
+                <img src="fav10.webp" alt=""     class="1m2">
+                <img src="fav11.webp" alt=""     class="1m2">
+                <img src="fav12.webp" alt=""     class="1m2">
+                <img src="fav2.webp" alt=""      class="1m2">
+            </div>
+          </div><br><br>
+        <!-- frequent section end -->
+        <!-- Recent section start -->
+        <div class="recent" id="rec">
+            <h1></h1><br><br><br>
+            <h1 style="color: white;">Recent</h1>
+            <div class="recent-image">
+                <img src="r1.webp" alt="" class="1m3">
+                <img src="r2.webp" alt="" class="1m3">
+                <img src="r3.webp" alt="" class="1m3">
+                <img src="r4.webp" alt="" class="1m3">
+                <img src="r5.webp" alt="" class="1m3">
+                <img src="r6.webp" alt="" class="1m3">
+                <img src="r7.webp" alt="" class="1m3">
+                <img src="r8.webp" alt="" class="1m3">
+                <img src="r2 (1).webp" alt="" class="im3">
+                <img src="r10.webp" alt="" class="im3">
+                <img src="r11.webp" alt="" class="im3">
+                <img src="r12.webp" alt="" class="im3">
+            </div>
+          </div><br><br>
+        <!-- Recent section end -->
+        <!-- Top rated section start -->
+        <div class="toprated" id="top">
+            <h1></h1><br><br><br>
+            <h1 style="color: white;">Top Rated</h1>
+            <div class="toprated-image">
+                <img src="t1.webp" alt="" class="i1">
+                <img src="t2.webp" alt="" class="i1">
+                <img src="t3.webp" alt="" class="i1">
+                <img src="t4.webp" alt="" class="i1">
+                <img src="t5.webp" alt="" class="i1">
+                <img src="t6.webp" alt="" class="i1">
+                <img src="t7.webp" alt="" class="i1">
+                <img src="t8.webp" alt="" class="i1">
+                <img src="t9.webp" alt="" class="i1">
+                <img src="t10.webp" alt="" class="i1">
+                <img src="t11.webp" alt="" class="i1">
+                <img src="t12.webp" alt="" class="i1">
+            </div>
+          </div><br><br>
+        <!-- Top rated section end -->
+        <!-- Favorites section start -->
+        <div class="favorites" id="fav">
+            <h1></h1><br><br><br>
+            <h1 style="color: white;"> Favorites</h1>
+           
+            <div class="favorites-image">
+                <img src="fav7.webp" alt="">
+                <img src="fav2.webp" alt="">
+                <img src="r12 (1).webp" alt="">
+                <img src="r5.webp" alt="">
+                <img src="fav5.jpg" alt="">
+                <img src="fav6.webp" alt="">
+                <img src="fav7.webp" alt="">
+                <img src="fav8.webp" alt="">
+                <img src="fav9.webp" alt="">
+                <img src="fav10.webp" alt="">
+                <img src="fav11.webp" alt="">
+                <img src="fav12.webp" alt="">
+            </div>
+          </div>  
+        <!-- Favorites section end -->
+        <!-- About section start -->
+
+
+        <!-- <div class="about" id="abo">
+            <h1>About</h1>
+            <div class="about-items">
+            <a href=""></a>
+            <a href="">Company</a>
+            <a href="">View Website in</a>
+            <a href="">Need Help</a>
+        </div>
+        </div> -->
+
+        <div id="about">
+            <h1></h1><hr><br><br><br>  
+            <h1 style="color: white;">About</h1>
+            <PRE class="abo">
+             Company                           View Website in               Need Help?
+  
+             About us                          Kannada                       Visit Help Center
+             
+             careers                                                         Share Feedback     
+              
+            </PRE>
+          </div>
+          <div class="leg">
+            <a  class="ap1" href="https://www.facebook.com/login/"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/1200px-Facebook_f_logo_%282021%29.svg.png" alt="" height="40px" width="40px"></a>
+            <a  class="ap1" href="https://twitter.com/?lang=en"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/1200px-Logo_of_Twitter.svg.png" alt="" height="40p" width="40px"></a>
+          </div>
+          <br><br><br><br> <br><br><br><br><br><br><br>
+        <!-- About section end -->
+
+        <!-- signup -->
+
+        
+</body>
+</html>
